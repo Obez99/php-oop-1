@@ -16,8 +16,21 @@ class Movie
     $this->movieData["rating"] = $_movieData["rating"];
     $this->movieData["cast"] = $_movieData["cast"];
   }
+
   public function getMovieTitle()
   {
     return $this->movieData["title"];
+  }
+  public function getMovieCompany()
+  {
+    return $this->movieData["company"];
+  }
+  public function getMovieRating()
+  {
+    return $this->movieData["title"];
+  }
+  public function getMovieCast()
+  {
+    return $this->movieData["cast"];
   }
 }
