@@ -19,14 +19,16 @@ require "classes/Movie.php";
   <?php foreach ($movies as $movie) {
     $currentMovie = new Movie($movie); ?>
     <ul>
-      <li><b><?php echo $currentMovie->movieData["title"] ?></b></li>
-      <li><?php echo $currentMovie->movieData["company"] ?></li>
-      <li>Voto: <?php echo $currentMovie->movieData["rating"] ?> </li>
+      <li><b><?php echo $currentMovie->getMovieTitle() ?></b></li>
+      <li><?php echo $currentMovie->getMovieCompany() ?></li>
+      <li>Voto: <?php echo $currentMovie->getMovieRating() ?> </li>
       <li>Cast:
         <ul>
-          <?php foreach ($currentMovie->movieData["cast"] as $actor) {
+          <?php
+          foreach ($currentMovie->getMovieCast() as $actor) {
             echo "<li>" . $actor["name"] . " " . $actor["surname"] . " - " . $actor["age"] . " anni" . "</li>";
-          } ?>
+          }
+          ?>
         </ul>
       </li>
     </ul>
