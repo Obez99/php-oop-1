@@ -20,6 +20,7 @@ require "classes/Movie.php";
     $currentMovie = new Movie($movie); ?>
     <ul>
       <li><b><?php echo $currentMovie->getMovieTitle() ?></b></li>
+      <li><?php echo $currentMovie->getTranslatedTitle() ?></li>
       <li><?php echo $currentMovie->getMovieCompany() ?></li>
       <li>Voto: <?php echo $currentMovie->getMovieRating() ?> </li>
       <li>Cast:

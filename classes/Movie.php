@@ -4,6 +4,7 @@ class Movie
 {
   public $movieData = [
     "title" => "Titolo",
+    "originalTitle" => "Original Title",
     "company" => "Casa produttrice",
     "rating" => null,
     "cast" => []
@@ -22,6 +23,9 @@ class Movie
     }
     if (array_key_exists("cast", $_movieData)) {
       $this->setMovieCast($_movieData["cast"]);
+    }
+    if (array_key_exists("originalTitle", $_movieData)) {
+      $this->setMovieOriginalTitle($_movieData["originalTitle"]);
     }
   }
 
@@ -64,6 +68,13 @@ class Movie
       return;
     }
     $this->movieData["rating"] = $rating;
+  }
+  public function setMovieOriginalTitle($originalTitle)
+  {
+    if ($this->isInvalid($originalTitle)) {
+      return;
+    }
+    $this->movieData["originalTitle"] = $originalTitle;
   }
 
   public function setMovieCast($cast)
@@ -115,5 +126,10 @@ class Movie
   {
     if (!isset($value) || is_null($value) || empty($value))
       return true;
+  }
+
+  public function getTranslatedTitle()
+  {
+    return $this->movieData["originalTitle"];
   }
 }

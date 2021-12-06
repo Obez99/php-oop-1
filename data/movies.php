@@ -3,6 +3,7 @@
 $movies = [
   [
     "title" => "Venom - La furia di Carnage",
+    "originalTitle" => "Venom: Let There Be Carnage",
     "company" => "Marvel",
     "rating" => 4,
     "cast" => [
@@ -30,6 +31,7 @@ $movies = [
   ],
   [
     "title" => "Inception",
+    "originalTitle" => "Inception",
     "company" => "Warner Bros",
     "rating" => 4,
     "cast" => [
