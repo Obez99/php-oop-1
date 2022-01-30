@@ -10,3 +10,5 @@ The ```Movie``` class contains various **SET** and **GET** functions, validation
 At the end a list of each movie's info is printed in index.php.
 
 ## Screenshots
+
+![oop1](https://user-images.githubusercontent.com/85038274/151710089-a3a4c323-afee-4413-a4ef-d2ee8000567e.PNG)
